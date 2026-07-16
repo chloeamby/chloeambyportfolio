@@ -1,22 +1,30 @@
 import React from 'react'
 import Home from './pages/Home'
-import Skills from './components/Skills'
+import Gallery from './components/Gallery'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Footer from './components/Footer'
-import Projects from './components/Projects'
+// import Projects from './components/Projects' // Commented out to hide for now
 import Contact from './components/Contact'
-import CustomCursor from './utils/CursorAnimation'
 
 export default function App() {
   return (
     <div className='font-sora scroll-smooth overflow-x-hidden'>
-      <CustomCursor/>
       <Navbar />
       <Home />
-      <Skills />
+      
+      {/* 
+        This wrapper is the missing link! 
+        Giving it the ID "gallery" lets the navbar scroll directly here.
+      */}
+      <div id="gallery" className="pt-20">
+        <Gallery />
+      </div>
+      
       <About />
-      <Projects />
+      
+      {/* <Projects /> */} {/* Commented out to hide for now */}
+      
       <Contact />
 
       <Footer />

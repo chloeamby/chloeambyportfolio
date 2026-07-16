@@ -1,10 +1,13 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import { FaInstagram } from 'react-icons/fa6'; // Clean, modern Instagram icon
+/* Commenting out unused imports to keep them safe but inactive
 import { BiLogoGmail } from 'react-icons/bi';
 import { BsGithub } from 'react-icons/bs';
 import { IoLogoLinkedin, IoLogoTwitter } from 'react-icons/io5';
 import { IoMdMail } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
+*/
 
 export default function Contact() {
   const ref = useRef(null);
@@ -25,10 +28,12 @@ export default function Contact() {
         transition={{ duration: 0.8 }}
         className='text-2xl lg:text-4xl text-center'
       >
-        Contact <span className='font-extrabold'>Me</span>
+        Follow <span className='font-extrabold'>Me</span>
       </motion.h2>
 
-      <div className='flex justify-between items-center mt-8 lg:mt-16 flex-col lg:flex-row'>
+      <div className='flex justify-center items-center mt-8 lg:mt-16 flex-col text-center max-w-xl mx-auto'>
+        
+        {/* HIDING THE ENTIRE FORM BLOCK FOR NOW
         <motion.div
           initial={{ x: -50, opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : { opacity: 0 }}
@@ -71,20 +76,40 @@ export default function Contact() {
             </motion.div>
           </form>
         </motion.div>
+        */}
 
+        {/* Right Info Block - Styled as a clean, centralized Social Contact */}
         <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : { opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
+          animate={isInView ? { y: 0, opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className='lg:w-1/2'
+          className='w-full'
         >
-          <div className='font-extrabold text-2xl lg:text-5xl mt-5 lg:mt-0 space-y-1 lg:space-y-3'>
-            <h2>Let's <span className='text-white' style={{ WebkitTextStroke: '1px black' }}>talk</span> for</h2>
-            <h2>Something special</h2>
+          <div className='font-extrabold text-2xl lg:text-4xl space-y-1 lg:space-y-2'>
+            <h2>My <span className='text-white' style={{ WebkitTextStroke: '1.5px black' }}>only</span> official</h2>
+            <h2>social media account</h2>
           </div>
 
-          <p className='text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-6'>I seek to push the limits of creativity to create high-engaging, user-friendly, and memorable interactive experiences.</p>
+          {/*<p className='text-[#71717A] text-sm/6 lg:text-base mt-3 lg:mt-5 max-w-md mx-auto'>
+            I am currently open to direct bookings and freelance collaborations. Send a message on Instagram to connect!
+          </p>*/}
 
+          {/* Clean Black and White Instagram Hyperlink */}
+          <div className='flex justify-center mt-6 lg:mt-8'>
+            <motion.a
+              href="https://www.instagram.com/kloi.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-black p-3 lg:p-4 rounded-full border-2 border-black flex items-center justify-center shadow-md hover:shadow-xl"
+              whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              <FaInstagram className="w-6 h-6 lg:w-8 lg:h-8" />
+            </motion.a>
+          </div>
+
+          {/* HIDING THE OLD EMAIL/PHONE CONNECTIONS FOR NOW
           <div className='font-semibold text-sm lg:text-xl flex flex-col mt-6 gap-2 lg:gap-4'>
             <motion.a
               whileHover={{ x: 5 }}
@@ -108,6 +133,7 @@ export default function Contact() {
               1234567890
             </motion.a>
           </div>
+          */}
         </motion.div>
       </div>
     </motion.div>

@@ -27,13 +27,18 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  // The active sections in your preferred order: Gallery first, and Contact mapped to the "contact" ID.
+  // "skills" and "projects" are fully excluded from this active list to hide them.
+  const navigationSections = ["gallery", "about", "contact"];
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${hasShadow ? "shadow-md" : "shadow-none"
-        }`}
+      className={`fixed lg:px-28 px-5 top-0 left-0 w-full z-50 bg-white p-5 transition-shadow duration-300 ${
+        hasShadow ? "shadow-md" : "shadow-none"
+      }`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <motion.img
@@ -45,15 +50,17 @@ export default function Navbar() {
           alt="Logo"
         />
 
+        {/* Desktop Menu */}
         <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
-          {["about", "skills", "projects", "contact"].map((section) => (
+          {navigationSections.map((section) => (
             <motion.li
               key={section}
               className="group"
               whileHover={{ scale: 1.1 }}
             >
               <button onClick={() => scrollToSection(section)}>
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {/* Shows "Socials" if the target ID is "contact", otherwise capitalizes the section name */}
+                {section === "contact" ? "Socials" : section.charAt(0).toUpperCase() + section.slice(1)}
               </button>
               <motion.span
                 className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex"
@@ -63,7 +70,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <motion.a
+        {/*<motion.a
           href=""
           className="hidden relative lg:inline-block px-4 py-2 font-medium group"
         >
@@ -72,7 +79,7 @@ export default function Navbar() {
           <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
             Resume <TbDownload size={16} />
           </span>
-        </motion.a>
+        </motion.a>*/}
 
         <motion.button
           className="lg:hidden text-2xl"
@@ -100,20 +107,20 @@ export default function Navbar() {
               <HiX />
             </button>
             <ul className="flex flex-col items-start ml-16 mt-28 h-full gap-y-6 font-semibold">
-              {["about", "skills", "projects", "contact"].map((section) => (
+              {navigationSections.map((section) => (
                 <motion.li
                   key={section}
-                  className="border-b"
-                  whileHover={{ scale: 1.1 }}
+                  className="border-b w-[80%] pb-2"
+                  whileHover={{ scale: 1.05 }}
                 >
                   <button onClick={() => scrollToSection(section)}>
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                    {section === "contact" ? "Socials" : section.charAt(0).toUpperCase() + section.slice(1)}
                   </button>
                 </motion.li>
               ))}
               <motion.a
                 href=""
-                className="relative inline-block px-4 py-2 font-semibold group"
+                className="relative inline-block px-4 py-2 font-semibold group mt-4"
                 whileHover={{ scale: 1.1 }}
               >
                 <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
