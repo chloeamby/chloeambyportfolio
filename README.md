@@ -25,8 +25,10 @@ npm run dev
 
 Your local site will typically spin up at http://localhost:5173/
 
+---
 ## 📦 Deployment
 This project is fully optimized for one-click deployments. I highly recommend using Vercel for hosting the frontend and connecting it directly to your GitHub repository for automatic deployments whenever you push changes.
 
+---
 ## Credits
 This portfolio was customized from the original template created by [@sathishk-dev](https://github.com/sathishk-dev).
