@@ -1,58 +1,32 @@
-# Portfolio Website
+# Chloe Rivera | Parts Model Portfolio Template
 
-This is a personal portfolio website built using Vite+React, Tailwind CSS, and Framer Motion to showcase my skills, projects, and experience.
+A clean, minimalist, and modern portfolio template designed for actors, models, and creatives. This project is built with React and integrated with Sanity Studio for easy, code-free content updates.
 
-## Features
-- **Responsive Design** – Works on all screen sizes.
-- **Smooth Animations** – Powered by Framer Motion for interactive user experience.
-- **Dark Mode Support** – Stylish UI with light and dark theme toggling.
-- **Optimized Performance** – Efficient rendering and smooth navigation.
-- **SEO Friendly** – Optimized for better search engine visibility.
+## 🌐 Live Demo
+See it in action at [kloi.ca](https://www.kloi.ca/)
 
-## Tech Stack
-- **Frontend:** React.js
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-
-## Installation & Setup
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/sathishk-dev/illustration-portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd illustration-portfolio
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
-4. Start the development server:
-   ```sh
-   npm run dev
-   ```
-   The app will be available at `http://localhost:3000/`.
-
-## Demo
-Check out the live demo of the portfolio website: [Live Demo](https://sk-illustration-portfolio.netlify.app/)
-
-## Deployment
-To deploy the portfolio website, you can use platforms like:
-- **Vercel**
-- **Netlify**
-- **GitHub Pages** (with additional configurations)
-
-## How to Contribute
-If you’d like to contribute or improve this project, feel free to fork the repository and submit a pull request.
-
-## 🙌 Show Your Support
-If you like this project, please star it and share it with your friends!
-
-## Contact
-If you have any questions or suggestions, feel free to reach out via:
-- **Email:** sathish31102004@gmail.com
-- **LinkedIn:** [@sathishk-dev](https://linkedin.com/in/sathishk-dev)
+## 🛠️ Tech Stack
+* **Frontend:** React, Tailwind CSS, Vite
+* **Animations:** Framer Motion
+* **CMS:** Sanity Studio (Headless CMS)
+* **Hosting:** Vercel
 
 ---
-Made with ❤️ by Sathish Kumar.
+
+## 🚀 Quick Start (Local Setup)
+
+Run the following commands in your terminal to get the project running locally:
+
+```bash
+git clone [https://github.com/chloeamby/chloeambyportfolio.git](https://github.com/chloeamby/chloeambyportfolio.git)
+cd chloeambyportfolio
+npm install
+npm run dev
+
+Your local site will typically spin up at http://localhost:5173/
+
+## 📦 Deployment
+This project is fully optimized for one-click deployments. I highly recommend using Vercel for hosting the frontend and connecting it directly to your GitHub repository for automatic deployments whenever you push changes.
+
+## Credits
+This portfolio was customized from the original template created by [@sathishk-dev](https://github.com/sathishk-dev).
