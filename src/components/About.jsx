@@ -42,7 +42,7 @@ export default function About() {
         {/* Bio Copy */}
         <div className="text-[#71717A] text-sm/6 lg:text-base mt-6 flex flex-col gap-4">
           <p>
-            I am a parts model split between <span className="text-black font-medium">Calgary, AB</span> and <span className="text-black font-medium">San Diego, CA</span>. My portfolio includes my creative shots.
+            I am a parts model based in <span className="text-black font-medium">Calgary, AB</span> and <span className="text-black font-medium">San Diego, CA</span>. My portfolio includes my creative shots.
           </p>
 
           <p>
