@@ -5,6 +5,8 @@ A clean, minimalist, and modern portfolio template designed for actors, models, 
 ## 🌐 Live Demo
 See it in action at [kloi.ca](https://www.kloi.ca/)
 
+---
+
 ## 🛠️ Tech Stack
 * **Frontend:** React, Tailwind CSS, Vite
 * **Animations:** Framer Motion
