@@ -28,7 +28,6 @@ export default function Navbar() {
   };
 
   // The active sections in your preferred order: Gallery first, and Contact mapped to the "contact" ID.
-  // "skills" and "projects" are fully excluded from this active list to hide them.
   const navigationSections = ["gallery", "about", "contact"];
 
   return (
@@ -50,37 +49,41 @@ export default function Navbar() {
           alt="Logo"
         />
 
-        {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
-          {navigationSections.map((section) => (
-            <motion.li
-              key={section}
-              className="group"
-              whileHover={{ scale: 1.1 }}
-            >
-              <button onClick={() => scrollToSection(section)}>
-                {/* Shows "Socials" if the target ID is "contact", otherwise capitalizes the section name */}
-                {section === "contact" ? "Socials" : section.charAt(0).toUpperCase() + section.slice(1)}
-              </button>
-              <motion.span
-                className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex"
-                layout
-              ></motion.span>
-            </motion.li>
-          ))}
-        </ul>
+        {/* Desktop Menu Wrapper */}
+        <div className="hidden lg:flex items-center gap-x-10">
+          <ul className="flex items-center gap-x-7 font-semibold">
+            {navigationSections.map((section) => (
+              <motion.li
+                key={section}
+                className="group"
+                whileHover={{ scale: 1.1 }}
+              >
+                <button onClick={() => scrollToSection(section)}>
+                  {section === "contact" ? "Socials" : section.charAt(0).toUpperCase() + section.slice(1)}
+                </button>
+                <motion.span
+                  className="w-0 transition-all duration-300 group-hover:w-full h-[2px] bg-black flex"
+                  layout
+                ></motion.span>
+              </motion.li>
+            ))}
+          </ul>
 
-        {/*<motion.a
-          href=""
-          className="hidden relative lg:inline-block px-4 py-2 font-medium group"
-        >
-          <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-          <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
-          <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
-            Resume <TbDownload size={16} />
-          </span>
-        </motion.a>*/}
+          {/* Uncommented and Restored Desktop Resume Button */}
+          <motion.a
+            href="/resume.pdf" /* Replace with your actual path or URL once uploaded! */
+            className="relative inline-block px-4 py-2 font-medium group"
+            whileHover={{ scale: 1.05 }}
+          >
+            <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+            <span className="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+            <span className="relative text-black group-hover:text-white flex items-center gap-x-3">
+              Resume <TbDownload size={16} />
+            </span>
+          </motion.a>
+        </div>
 
+        {/* Mobile Hamburger Trigger */}
         <motion.button
           className="lg:hidden text-2xl"
           onClick={() => setIsOpen(!isOpen)}
@@ -118,8 +121,10 @@ export default function Navbar() {
                   </button>
                 </motion.li>
               ))}
+              
+              {/* Mobile Resume Button */}
               <motion.a
-                href=""
+                href="/resume.pdf" /* Match the desktop path here */
                 className="relative inline-block px-4 py-2 font-semibold group mt-4"
                 whileHover={{ scale: 1.1 }}
               >
