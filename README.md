@@ -17,7 +17,7 @@ See it in action at [kloi.ca](https://www.kloi.ca/)
 
 Run the following commands in your terminal to get the project running locally:
 
-```bash
+
 git clone [https://github.com/chloeamby/chloeambyportfolio.git](https://github.com/chloeamby/chloeambyportfolio.git)
 cd chloeambyportfolio
 npm install
