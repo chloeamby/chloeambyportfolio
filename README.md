@@ -2,6 +2,8 @@
 
 A clean, minimalist, and modern portfolio template designed for actors, models, and creatives. This project is built with React and integrated with Sanity Studio for easy, code-free content updates.
 
+---
+
 ## 🌐 Live Demo
 See it in action at [kloi.ca](https://www.kloi.ca/)
 
